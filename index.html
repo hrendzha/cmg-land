@@ -70,20 +70,8 @@
 			align-items: center;
 			justify-content: center;
 		}
-		.mh-10 {
-			margin: 0 10px;
-		}
-        .mh-20 {
-            margin: 0 20px;
-        }
-        .mh-30 {
+		.mh {
             margin: 0 30px;
-        }
-        .mh-40 {
-            margin: 0 40px;
-        }
-        .mh-50 {
-            margin: 0 50px;
         }
 
         section {
@@ -414,6 +402,9 @@
             font-size: 40px;
 			font-weight: 700;
 		}
+        .s9 .inrow.mh {
+            margin: 0 50px;
+        }
 
         /*s10*/
 		.s10 .row {
@@ -453,6 +444,9 @@
 			height: 100vh;
 			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/tild3363-3934-4031-b835-326535353938__zniix-2.jpg);
 		}
+        .s11 .inrow.mh {
+            margin: 0 40px;
+        }
         .s11 .image {
 			margin-bottom: 24px;
 		}
@@ -496,6 +490,9 @@
             line-height: 32px;
             text-align: center;
 		}
+		.s13 .inrow.mh {
+            margin: 0 20px;
+		}
 
         @media screen and (min-height: 960px) {
             .s1 {
@@ -524,6 +521,107 @@
             }
             .s1 .row {
                 padding: 0;
+            }
+
+            .s4 .inrow.mh {
+                margin: 0 70px;
+            }
+            section.s4 .title {
+                font-size: 27px;
+            }
+            .s4 .inrow .item-wrap {
+                padding: 35px;
+                font-size: 19px;
+            }
+            .s4 .inrow .item-wrap img {
+                height: 100px;
+                width: 100px;
+            }
+
+            .s8 .inrow.mh {
+                margin: 0 60px;
+            }
+            .s8 .image img {
+                width: 12vh;
+                height: 12vh;
+            }
+            .s8 .list-item .image {
+                margin-right: 30px;
+            }
+            .s8 .content h3 {
+                font-size: 23px;
+            }
+            .s8 .content {
+                font-size: 15px;
+            }
+            .s8 .row4 .inrow {
+                align-items: center;
+            }
+
+            .s10 .content h3 {
+                font-size: 29px;
+            }
+            .s10 .content li p {
+                font-size: 25px;
+            }
+            .s10 .inrow.mh {
+                margin: 0 70px;
+            }
+
+            .s11 .content p {
+                font-size: 24px;
+                line-height: 38px;
+            }
+
+            .s12 .content p {
+                font-size: 20px;
+            }
+            .s12 .image.fixed {
+                width: 340px;
+                margin: 0 auto 5vh auto;
+            }
+
+            .s13 .content p {
+                font-size: 34px;
+                line-height: 40px;
+            }
+        }
+
+        @media screen and (min-width: 780px) and (max-width: 959px) {
+            .s3 .inrow.mh {
+                margin: 0 110px;
+            }
+            .s3 .content {
+                column-count: 2;
+            }
+            .s3 .content.slide p {
+                font-size: 18px;
+            }
+
+            .s4 .inrow {
+                flex-grow: 0;
+            }
+            .s4 .inrow .item-wrap,
+            .s4 .title {
+                max-width: 560px;
+            }
+
+            .s6 .inrow.mh {
+                margin: 0 90px;
+            }
+            .s6 .content p {
+                margin-bottom: 15px;
+                font-size: 21px;
+            }
+
+            .s10 .content ul {
+                column-count: 2;
+            }
+            .s10 .content h3 {
+                font-size: 38px;    
+            }
+            .s10 .inrow.mh {
+                margin: 0px 120px;
             }
         }
 
@@ -838,7 +936,7 @@
 
         <section class="s3">
             <div class="row row1">
-                <div class="inrow jc-c mh-30">
+                <div class="inrow jc-c mh">
                     <div class="content slide">
                         <p>Structures for Forex, Gambling, Crypto</p>
                         <p>Assistance in preparation of documents for establishing a source of funds</p>
@@ -854,7 +952,7 @@
                 </div>
             </div>
             <div class="row row2">
-                <div class="inrow mh-30">
+                <div class="inrow mh">
                     <div class="image fixed"></div>
                 </div>
             </div>
@@ -862,7 +960,7 @@
 
         <section class="s4">
             <div class="row">
-                <div class="inrow mh-30">
+                <div class="inrow mh">
                     <div class="title">
                         Services for private persons
                     </div>
@@ -910,7 +1008,7 @@
 
         <section class="s6">
             <div class="row row1">
-                <div class="inrow jc-c mh-30">
+                <div class="inrow jc-c mh">
                     <div class="content slide">
                         <p>Creation of a legal structure for imports</p>
                         <p>
@@ -925,7 +1023,7 @@
                 </div>
             </div>
             <div class="row row2">
-                <div class="inrow mh-30">
+                <div class="inrow mh">
                     <div class="image fixed"></div>
                 </div>
             </div>
@@ -943,7 +1041,7 @@
 
         <section class="s8">
             <div class="row row1">
-                <div class="inrow mh-30">
+                <div class="inrow mh">
                     <div class="list-item">
                         <div class="image">
                             <img src="/images/tild3230-3536-4338-b437-343535613136__1.svg" alt="" title="" />
@@ -960,7 +1058,7 @@
                 </div>
             </div>
             <div class="row row2">
-                <div class="inrow mh-30">
+                <div class="inrow mh">
                     <div class="list-item">
                         <div class="image">
                             <img src="/images/tild6466-3838-4363-b832-343936353230__2.svg" alt="" title="" />
@@ -978,7 +1076,7 @@
                 </div>
             </div>
             <div class="row row3">
-                <div class="inrow mh-30">
+                <div class="inrow mh">
                     <div class="list-item">
                         <div class="image">
                             <img src="/images/tild3439-3861-4230-b065-383966363037__3.svg" alt="" title="" />
@@ -995,7 +1093,7 @@
                 </div>
             </div>
             <div class="row row4">
-                <div class="inrow mh-30">
+                <div class="inrow mh">
                     <div class="image">
                         <img src="/images/tild6634-3334-4730-b539-363436376434__logoincosacia.png" alt="" title="" />
                     </div>
@@ -1005,7 +1103,7 @@
 
         <section class="s9">
             <div class="row">
-                <div class="inrow mh-50 f-c">
+                <div class="inrow mh f-c">
                     <div class="content">
                         <p>Securities and credit factoring operations</p>
                     </div>
@@ -1015,7 +1113,7 @@
 
         <section class="s10">
             <div class="row">
-                <div class="inrow jc-c mh-30">
+                <div class="inrow jc-c mh">
                     <div class="content">
                         <h3>
                             Tax planning and<br />
@@ -1057,7 +1155,7 @@
 
         <section class="s11">
             <div class="row">
-                <div class="inrow mh-40 f-c">
+                <div class="inrow mh f-c">
                     <div class="image">
                         <img src="/images/tild6365-3764-4337-b837-636332313033__cmg-logo-white.png" />
                     </div>
@@ -1070,7 +1168,7 @@
 
         <section class="s12">
             <div class="row row1">
-                <div class="inrow f-c mh-30">
+                <div class="inrow f-c mh">
                     <div class="content slide sm">
                         <p>Creation and administration of CIF/Mutual Funds</p>
                         <p>Business structuring</p>
@@ -1085,7 +1183,7 @@
                 </div>
             </div>
             <div class="row row2">
-                <div class="inrow mh-30">
+                <div class="inrow mh">
                     <div class="image fixed">
                     </div>
                 </div>
@@ -1094,7 +1192,7 @@
 
         <section class="s13">
             <div class="row">
-                <div class="inrow mh-20 f-c">
+                <div class="inrow mh f-c">
                     <div class="content">
                         <p>Ready for mutually beneficial cooperation!</p>
                     </div>

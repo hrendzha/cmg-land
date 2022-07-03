@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -80,9 +79,16 @@
         .mh-30 {
             margin: 0 30px;
         }
+        .mh-40 {
+            margin: 0 40px;
+        }
+        .mh-50 {
+            margin: 0 50px;
+        }
 
         section {
             height: 100vh;
+            /* transition: height 0.1s; */
         }
         section .inner {
             padding: 0 20px;
@@ -150,17 +156,28 @@
 				background: url('/images/tild3938-6234-4261-b661-646161366563__vector.svg') no-repeat 0 0;
 				background-size: 25px 25px;
 			}
+			.slide.sm p::before {
+                --ml: 30px;
+
+				top: 6px;
+				width: var(--ml);
+				height: 20px;
+				background-size: 20px 20px;
+			}
         /***/
 
         /*s1*/
+        .s1 {
+			height: 125vh;
+		}
 		.s1 .row {
 			height: 25vh;
-			padding-top: 20px;
+			padding-top: 15px;
 		}
 		.s1 .inrow {
 			margin: 0 10px;
 		}
-		.s1 .row img {
+		.s1 .row .image:first-child {
 			margin-bottom: 7px;
 			max-height: 100%;
 		}
@@ -183,15 +200,15 @@
             background-image: url(/images/tild3332-3834-4564-a133-313561356436__frame_4.jpg);
         }
 		.s1 .row3 {
-			padding-top: 10px;
 			background-image: url(/images/tild6232-3863-4138-b133-633138343935__mask_group.jpg);
 		}
 		.s1 .row4 {
-			padding-top: 6px;
+			padding-top: 10px;
 			background-image: url(/images/tild3063-3161-4266-a538-306466653664__charts-coffee-cup-93.jpg);
 		}
 		.s1 .row5 {
-			background-image: url(/images/tild3932-3130-4134-b138-623165393464__zniix-2.jpg);
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),url(/images/tild3932-3130-4134-b138-623165393464__zniix-2.jpg);
+            background-position: top center;
 		}
 		.s1 .row .content p {
 			margin-bottom: 6px;
@@ -204,7 +221,7 @@
 
         /*s2*/
         .s2 {
-            margin-top: 25vh;
+            /* margin-top: calc(25 * var(--vp)); */
         }
 			.s2 .row {
 				background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/tild6134-3864-4239-a339-386238346432__hieu-vu-minh-92776-u.jpg);
@@ -215,6 +232,15 @@
 			}
 			.s2 .image img {
 				height: 9.5vh;
+			}
+
+            .s2 .content p {
+				font-size: 16px;
+                font-weight: 400;
+			}
+
+            .s2 .image {
+				margin-bottom: 40px;
 			}
 
         /*s3*/
@@ -231,9 +257,36 @@
 		.s3 .image {
 			background-image: url(/images/tild3835-6164-4232-b339-386539336236__agenda-analysis-busi.jpg);
 		}
+		.s3 .content.slide p {
+			font-size: 14px;
+		}
+		.s3 .slide p::before {
+            --ml: 30px;
+
+            top: 0px;
+            height: 18px;
+            background-size: 18px 18px;
+        }
+        
         /*end s3*/
 
         /*s4*/
+        section.s4 {
+            height: unset;
+            padding: 70px 0px;
+        }
+        section.s4 .title {
+            padding: 30px 5px;
+            margin-bottom: 50px;
+
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+
+            border-radius: 40px;
+            background-color: #dbdbdb;
+        }
+
 		.s4 .item-wrap {
 			border-radius: 10px;
 		}
@@ -263,12 +316,13 @@
 				height: 50px;
 				width: 50px;
 				margin-right: 30px;
+
+                opacity: 0.3;
 			}
         /*end s4*/
 
         /*s5*/
         .s5 .row {
-            height: 100vh;
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/tild3562-3337-4131-b966-346436383939__image_3.png);
         }
         .s5 .image img {
@@ -290,7 +344,6 @@
 
         /*s7*/
 		.s7 .row {
-			height: 100vh;
 			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/tild3634-6339-4433-b330-353461313665__incasator.png);
 		}
 		.s7 .image img {
@@ -330,10 +383,36 @@
                 height: 14vh;
 			}
 
+            .s8 .content h3 {
+                margin-left: -20px;
+                margin-bottom: 5px;
+
+                font-size: 20px;
+            }
+            .s8 .content ul {
+               list-style: unset;
+            }
+            .s8 .list-item .image {
+               margin-right: 10px;
+            }
+            .s8 .row4 .inrow {
+                justify-content: flex-start;
+			}
+
 		/*s9*/
 		.s9 .row {
 			height: 100vh;
 			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/tild3762-6163-4562-a564-313832643565__charts-coffee-cup-93.jpg);
+		}
+		.s9 .content p {
+            font-size: 40px;
+			font-weight: 700;
+            line-height: 65px;
+            text-align: center;
+		}
+		.s9 .inrow p {
+            font-size: 40px;
+			font-weight: 700;
 		}
 
         /*s10*/
@@ -360,12 +439,13 @@
             text-align: center;
         }
         .s10 .content li p {
-            margin: 0 0 0 12px;
+            margin: 0 0 0 20px;
             font-size: 20px;
             font-weight: 700;
         }
 		.s10 .content li img {
 			height: 8vh;
+            opacity: .5;
 		}
 
         /*s11*/
@@ -373,22 +453,35 @@
 			height: 100vh;
 			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/tild3363-3934-4031-b835-326535353938__zniix-2.jpg);
 		}
+        .s11 .image {
+			margin-bottom: 24px;
+		}
 		.s11 .image img {
 			height: 10vh;
 		}
+		.s11 .content p {
+			font-size: 16px;
+            line-height: 24px;
+            text-align: center; 
+		}
+		
         /*end s11*/
 
         /*s12*/
         .s12 .row1 {
-            height: 55vh;
+            height: 50vh;
         }
         .s12 .row2 {
-            height: 45vh;
+            height: 50vh;
         }
         .s12 .content {
             color: var(--c-black);
         }
-		.s12 .image {
+        .s12 .content p {
+            font-size: 17px;
+        }
+		.s12 .image.fixed {
+            margin-bottom: 2vh;
 			background-image: url(/images/tild3136-6132-4266-b336-663061613065__2021-08-27_17-36-33.png);
 		}
         /*end s12*/
@@ -398,6 +491,78 @@
             height: 100%;
 			background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.8), rgba(0, 0, 0, 0.6)), url(/images/tild3166-3164-4564-b661-336562626633__timj-310824-unsplash.jpg);
 		}
+		.s13 .content p {
+            font-size: 22px;
+            line-height: 32px;
+            text-align: center;
+		}
+
+        @media screen and (min-height: 960px) {
+            .s1 {
+                height: 100vh;
+			}
+            .s1 .row {
+                height: 20vh;
+            }
+        }
+
+        @media screen and (min-width: 600px) and (max-width: 959px) {
+            .s1 .inrow {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .s1 .image {
+                width: 210px;
+                flex-shrink: 0;
+                align-self: flex-start;
+                padding-top: 30px;
+            }
+            .s1 .content {
+                font-size: 15px;
+                flex-grow: 1;
+            }
+            .s1 .row {
+                padding: 0;
+            }
+        }
+
+        @media screen and (min-width: 960px) {
+            .s1 {
+                height: 100vh;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+            .s1 .row {
+                width: 20vw;
+                height: 100vh;
+            }
+            .s1 .image {
+                height: 230px;
+            }   
+            .s1 .content {
+                font-size: 14px;
+            }   
+            .s1 .row .content p {
+                margin-bottom: 20px;
+            }
+            
+            /* s2 */
+            .s2 {
+                margin-top: 0;
+            }
+            .s2 .image {
+                margin-bottom: 50px;
+            }
+            .s2 .image img {
+                height: 10.5vh;
+            }
+            .s2 .content p {
+                font-size: 26px;
+            }
+            /* s2 end */
+        }
     </style>
 
     <style type="text/css">
@@ -611,7 +776,7 @@
         <section class="s3">
             <div class="row row1">
                 <div class="inrow jc-c mh-30">
-                    <div class="content">
+                    <div class="content slide">
                         <p>Structures for Forex, Gambling, Crypto</p>
                         <p>Assistance in preparation of documents for establishing a source of funds</p>
                         <p>Foreign companies support</p>
@@ -634,7 +799,7 @@
 
         <section class="s4">
             <div class="row">
-                <div class="inrow mh-10">
+                <div class="inrow mh-30">
                     <div class="title">
                         Services for private persons
                     </div>
@@ -739,10 +904,12 @@
                         </div>
                         <div class="content">
                             <h3>Collection of individuals</h3>
-                            <p>Transportation of valuables from bank to bank</p>
-                            <p>Cash transportation for real estate / car transactions</p>
-                            <p>Cash transportation for deposits</p>
-                            <p>Transportation of funds to a specified address</p>
+                            <ul>
+                                <li>Transportation of valuables from bank to bank</li>
+                                <li>Cash transportation for real estate / car transactions</li>
+                                <li>Cash transportation for deposits</li>
+                                <li>Transportation of funds to a specified address</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -755,9 +922,11 @@
                         </div>
                         <div class="content">
                             <h3>Intercity transportation</h3>
-                            <p>Transportation of cash from city to city</p>
-                            <p>Transportation of valuables, jewelry, antiques</p>
-                            <p>Transportation of documents from city to city</p>
+                            <ul>
+                                <li>Transportation of cash from city to city</li>
+                                <li>Transportation of valuables, jewelry, antiques</li>
+                                <li>Transportation of documents from city to city</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -773,7 +942,7 @@
 
         <section class="s9">
             <div class="row">
-                <div class="inrow f-c">
+                <div class="inrow mh-50 f-c">
                     <div class="content">
                         <p>Securities and credit factoring operations</p>
                     </div>
@@ -825,7 +994,7 @@
 
         <section class="s11">
             <div class="row">
-                <div class="inrow f-c">
+                <div class="inrow mh-40 f-c">
                     <div class="image">
                         <img src="/images/tild6365-3764-4337-b837-636332313033__cmg-logo-white.png" />
                     </div>
@@ -839,7 +1008,7 @@
         <section class="s12">
             <div class="row row1">
                 <div class="inrow f-c mh-30">
-                    <div class="content slide">
+                    <div class="content slide sm">
                         <p>Creation and administration of CIF/Mutual Funds</p>
                         <p>Business structuring</p>
                         <p>Intra-group liquidity management</p>
@@ -862,7 +1031,7 @@
 
         <section class="s13">
             <div class="row">
-                <div class="inrow f-c">
+                <div class="inrow mh-20 f-c">
                     <div class="content">
                         <p>Ready for mutually beneficial cooperation!</p>
                     </div>

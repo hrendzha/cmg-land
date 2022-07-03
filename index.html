@@ -207,7 +207,7 @@
 			background-image: url(/images/tild3063-3161-4266-a538-306466653664__charts-coffee-cup-93.jpg);
 		}
 		.s1 .row5 {
-			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),url(/images/tild3932-3130-4134-b138-623165393464__zniix-2.jpg);
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(/images/tild3932-3130-4134-b138-623165393464__zniix-2.jpg);
             background-position: top center;
 		}
 		.s1 .row .content p {
@@ -687,19 +687,123 @@
                 flex-direction: column;
             }
 
-                .s3 .content {
-                    column-count: 2;
-                    width: 1000px;
-                    margin: 0 auto;
-                    column-gap: 50px;
-                    font-size: 22px;
-                    font-weight: 400;
-                }
+				.s3 .content {
+					column-count: 2;
+					width: 1000px;
+					margin: 0 auto;
+					column-gap: 50px;
+					animation: sbs-anim-rec109628941-1470210011265 1s linear forwards;
+					backface-visibility: hidden;
+				}
 
-                    .s3 .content p {
-                        margin-bottom: 32px;
+					.s3 .content.slide p {
+						margin-bottom: 32px;
+						font-size: 22px;
+						font-weight: 400;
+					}
+                    .s3 .content.slide p::before {
+                        top: 6px;
                     }
             /*end s3*/
+            /*s4*/
+			.s4 .content {
+				display: grid;
+				max-width: 1120px;
+				margin: 0 auto;
+				column-gap: 40px;
+			}
+			.s4 li {
+				max-width: calc(50vw - 30px);
+				width: 560px;
+			}
+			/*row1*/
+				.s4 li:nth-child(2) {
+					grid-row: 1;
+					grid-column: 1;
+					margin-bottom: 0 !important;
+				}
+				.s4 li:nth-child(3) {
+					grid-row: 1;
+					grid-column: 2;
+					margin-bottom: 0 !important;
+				}
+            /*row2*/
+			.s4 li:nth-child(6) {
+				grid-row: 2;
+				grid-column: 1;
+				height: 50px;
+				background: url(/images/tild3632-3262-4361-b032-613464323731__1.svg) no-repeat 100% 0;
+				background-size: 132px 50px;
+			}
+			.s4 li:nth-child(7) {
+				grid-row: 2;
+				grid-column: 2;
+				height: 50px;
+				background: url(/images/tild3262-3933-4766-b334-623130643461__2.svg) no-repeat 0 0;
+				background-size: 132px 50px;
+			}
+			/*row3*/
+				.s4 li:nth-child(1) {
+					position: relative;
+					top: -7px;
+					margin: 0 auto -14px auto;
+					grid-row: 3;
+					grid-column: 1/ span 2;
+					padding: 0;
+					border-radius: 0;
+					background-color: transparent;
+					font-size: 30px;
+					font-weight: 700;
+				}
+					.s4 li:nth-child(1) span {
+						display: inline-block;
+						max-width: calc(50vw - 30px);
+						width: 560px;
+						height: 131px;
+					}
+					.s4 li:nth-child(1) > span {
+						background: url(/images/tild3962-3565-4563-b436-343730393535__border2.svg) no-repeat 0 0;
+						background-size: 224px 131px;
+					}
+						.s4 li:nth-child(1) > span > span {
+							background: url(/images/tild6439-3463-4662-b166-313537343264__border.svg) no-repeat 100% 0;
+							background-size: 224px 131px;
+						}
+							.s4 li:nth-child(1) > span > span > span {
+								display: flex;
+								margin: 13px;
+								border-radius: 70px;
+								background-color: #dbdbdb;
+								height: calc(131px - 26px);
+								width: auto;
+							}
+            /*row4*/
+			.s4 li:nth-child(8) {
+				grid-row: 4;
+				grid-column: 1;
+				height: 50px;
+				background: url(/images/tild3830-3737-4264-a163-336634333733__3.svg) no-repeat 100% 0;
+				background-size: 132px 50px;
+			}
+			.s4 li:nth-child(9) {
+				grid-row: 4;
+				grid-column: 2;
+				height: 50px;
+				background: url(/images/tild6135-3161-4464-b533-393233346462__4.svg) no-repeat 0 0;
+				background-size: 132px 50px;
+			}
+            /*row5*/
+			.s4 li:nth-child(4) {
+				grid-row: 5;
+				grid-column: 1;
+			}
+			.s4 li:nth-child(5) {
+				grid-row: 5;
+				grid-column: 2;
+			}
+
+			
+            /*end s4*/
 
             .slider-panel {
                 display: block !important;
@@ -823,6 +927,7 @@
                 </div>
             </div>
         </section>
+
         <section class="s2">
             <div class="row">
                 <div class="inrow">
@@ -863,37 +968,43 @@
         <section class="s4">
             <div class="row">
                 <div class="inrow mh-30">
-                    <div class="title">
-                        Services for private persons
-                    </div>
-                    <div class="item-wrap">
-                        <img src="/images/tild3339-3734-4631-b334-646233626463__001-boarding-pass.svg" />
-                        <p>
-                            Alternative citizenship<br />
-                            through investments
-                        </p>
-                    </div>
-                    <div class="item-wrap">
-                        <img src="/images/tild3161-3761-4163-b966-303537626562__002-architecture-and.svg" />
-                        <p>
-                            Asset acquisitions support<br />
-                            (corporate rights, real estate, yachts, securities)
-                        </p>
-                    </div>
-                    <div class="item-wrap">
-                        <img src="/images/tild3631-3232-4533-b735-323162373733__001-bank-account.svg" />
-                        <p>
-                            Support in opening<br />
-                            personal accounts abroad
-                        </p>
-                    </div>
-                    <div class="item-wrap">
-                        <img src="/images/tild3039-3839-4965-a561-396539646436__002-analysis.svg" />
-                        <p>
-                            Tax consulting<br />
-                            (CFC Law, CRS, BEPS)
-                        </p>
-                    </div>
+                    <ul class="content">
+                        <li class="title">
+                            <span><span><span>Services for private persons</span></span></span>
+                        </li>
+                        <li class="item-wrap">
+                            <img src="/images/tild3339-3734-4631-b334-646233626463__001-boarding-pass.svg" />
+                            <p>
+                                Alternative citizenship<br />
+                                through investments
+                            </p>
+                        </li>
+                        <li class="item-wrap">
+                            <img src="/images/tild3161-3761-4163-b966-303537626562__002-architecture-and.svg" />
+                            <p>
+                                Asset acquisitions support<br />
+                                (corporate rights, real estate, yachts, securities)
+                            </p>
+                        </li>
+                        <li class="item-wrap">
+                            <img src="/images/tild3631-3232-4533-b735-323162373733__001-bank-account.svg" />
+                            <p>
+                                Support in opening<br />
+                                personal accounts abroad
+                            </p>
+                        </li>
+                        <li class="item-wrap">
+                            <img src="/images/tild3039-3839-4965-a561-396539646436__002-analysis.svg" />
+                            <p>
+                                Tax consulting<br />
+                                (CFC Law, CRS, BEPS)
+                            </p>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
             </div>
         </section>

@@ -1461,22 +1461,24 @@
             /* s13 end */
 
             .slider-panel {
-                display: block !important;
+                display: none;
                 user-select: none;
             }
 
-            .slider-panel__inner {
-                position: fixed;
-                z-index: 108500477;
-                bottom: 30px;
-                right: 30px;
-                transition: all 1000ms cubic-bezier(.215,.61,.355,1);
-                transition-timing-function: cubic-bezier(.215,.61,.355,1);
-                border-radius: 30px;
-                background-color: rgba(0,0,0,.7);
-                width: 50px;
-            }
-
+			.slider-panel__inner {
+				position: fixed;
+				z-index: 108500477;
+				bottom: 30px;
+				border-radius: 30px;
+				background-color: rgba(0,0,0,.7);
+				width: 50px;
+				right: 0;
+				margin-right: -50px;
+				transition: all 1s ease-in-out;
+			}
+				.slider-panel__inner.translateX {
+					margin-right: 30px;
+				}
             .slider-panel__prev {
                 width: 50px;
                 height: 50px;
@@ -4538,17 +4540,25 @@
     <script type="text/javascript">
 		const sliderPanel = new class SliderPanel {
 			constructor() {
-				this.panel = null;
+                this.panel = null;
+                this.inner = null;
 				this.prevBtn = null;
 				this.countTitle = null;
 				this.nextBtn = null;
 
 				this.currentSlideIndex = 0;
 				this.prevSlideIndex = 0;
-				this.totalSlides = 0;
+                this.totalSlides = 0;
+
+                this.inited = false;
 			}
-			init() {
-				this.panel = document.querySelector('.slider-panel');
+            init() {
+                if (this.inited) {
+                    return;
+                }
+                this.inited = true;
+                this.panel = document.querySelector('.slider-panel');
+				this.inner = this.panel.querySelector('.slider-panel__inner');
 				this.prevBtn = this.panel.querySelector('.slider-panel__prev');
 				this.countTitle = this.panel.querySelector('.slider-panel__count');
 				this.nextBtn = this.panel.querySelector('.slider-panel__next');
@@ -4560,7 +4570,11 @@
 				this.prevBtn.addEventListener('click', this.onPrevClick);
 				this.nextBtn.addEventListener('click', this.onNextClick);
 
-				this.updateCount();
+                this.updateCount();
+
+                this.panel.style.display = 'block';
+                setTimeout(() => this.inner.classList.add('translateX'), 100);
+                
 			}
 			/**
 			 * @param {MouseEvent} e

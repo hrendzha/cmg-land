@@ -406,11 +406,14 @@
         .s9 .inrow.mh {
             margin: 0 50px;
         }
+        .s9 .content .span-br {
+            display: none;
+        }
 
         /*s10*/
 		.s10 .row {
 			height: 100vh;
-			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/tild3337-3738-4432-b430-623933346136__accounting-close-up-.jpg);
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/tild3337-3738-4432-b430-623933346136__accounting-close-up-.jpg);
 		}
         .s10 .content ul  {
             
@@ -697,6 +700,10 @@
                     height: 100vh;
                 }
 
+                .s1 .inrow {
+                    margin: 0 20px;
+                }
+
                 .s1 .row1 {
                     animation: sbs-anim-rec110566382-1494844549684 1s linear forwards;
                     backface-visibility: hidden;
@@ -807,6 +814,11 @@
 					}
                     .s3 .content.slide p::before {
                         top: 6px;
+                    }
+
+                    .s3 .row2 {
+                        animation: sbs-anim-rec109628941-1478017624939 2s linear forwards;
+                        backface-visibility: hidden;
                     }
             /*end s3*/
 
@@ -1261,6 +1273,53 @@
 					}
             /*end s12*/
 
+            /* s9 start */
+            .s9 .content .span-br {
+                display: block;
+            }
+            /* s9 end */
+
+            /* s10 start */
+            .s10 .content ul {
+                column-count: 3;
+            }
+            .s10 .content h3 {
+                margin: 0 0 10vh 0;
+                line-height: 54px;
+                font-size: 38px;
+            }
+            .s10 .content li p {
+                font-size: 22px;
+            }
+            .s10 .inrow.mh {
+                margin: 0 210px;
+            }
+            .s10 .content li {
+                margin: 0 0 12vh 0;
+            }
+            /* s10 end */
+
+
+            /* s11 start */
+            .s11 .content p {
+                font-size: 29px;
+                line-height: 64px;
+            }
+            .s11 .image img {
+                height: 14vh;
+            }
+            /* s11 end */
+
+            /* s13 start */
+            .s13 .content p {
+                font-size: 50px;
+                line-height: 60px;
+            }
+            .s13 .content .span-br {
+                display: block;
+            }
+            /* s13 end */
+
             .slider-panel {
                 display: block !important;
                 user-select: none;
@@ -1309,6 +1368,12 @@
                 background-origin: content-box;
                 background-repeat: no-repeat;
                 transform: rotate(90deg);
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .s1 .inrow {
+                margin: 0 30px;
             }
         }
     </style>
@@ -1574,7 +1639,7 @@
             <div class="row">
                 <div class="inrow mh f-c">
                     <div class="content">
-                        <p>Securities and credit factoring operations</p>
+                        <p>Securities and credit factoring <span class="span-br"></span> operations</p>
                     </div>
                 </div>
             </div>
@@ -1663,7 +1728,7 @@
             <div class="row">
                 <div class="inrow mh f-c">
                     <div class="content">
-                        <p>Ready for mutually beneficial cooperation!</p>
+                        <p>Ready for mutually beneficial <span class="span-br"></span> cooperation!</p>
                     </div>
                 </div>
             </div>

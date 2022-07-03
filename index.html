@@ -3655,10 +3655,68 @@
     </style>
 
     <script type="text/javascript">
-        (function () {
-            const panel = document.querySelector('.slider-panel');
-            
-        })();
+		const sliderPanel = new class SliderPanel {
+			constructor() {
+				this.panel = null;
+				this.prevBtn = null;
+				this.countTitle = null;
+				this.nextBtn = null;
+
+				this.currentSlideIndex = 0;
+				this.prevSlideIndex = 0;
+				this.totalSlides = 0;
+			}
+			init() {
+				this.panel = document.querySelector('.slider-panel');
+				this.prevBtn = this.panel.querySelector('.slider-panel__prev');
+				this.countTitle = this.panel.querySelector('.slider-panel__count');
+				this.nextBtn = this.panel.querySelector('.slider-panel__next');
+
+				this.currentSlideIndex = 1;
+				this.prevSlideIndex = 1;
+				this.totalSlides = document.querySelectorAll('section').length;
+
+				this.prevBtn.addEventListener('click', this.onPrevClick);
+				this.nextBtn.addEventListener('click', this.onNextClick);
+
+				this.updateCount();
+			}
+			/**
+			 * @param {MouseEvent} e
+			 */
+			onPrevClick = e => {
+				e.preventDefault();
+				this.prevSlideIndex = this.currentSlideIndex;
+				this.currentSlideIndex--;
+				if (this.currentSlideIndex === 0) {
+					this.currentSlideIndex = this.totalSlides;
+				}
+				this.updateCount();
+			}
+			/**
+			 * @param {MouseEvent} e
+			 */
+			onNextClick = e => {
+				e.preventDefault();
+				this.prevSlideIndex = this.currentSlideIndex;
+				this.currentSlideIndex++;
+				if (this.currentSlideIndex > this.totalSlides) {
+					this.currentSlideIndex = 1;
+				}
+				this.updateCount();
+			}
+			getSection(index) {
+				return document.querySelector(`.s${index}`);
+			}
+			updateCount() {
+				if (this.prevSlideIndex !== this.currentSlideIndex) {
+					this.getSection(this.prevSlideIndex).style.display = 'none';
+				}
+				this.getSection(this.currentSlideIndex).style.display = 'flex';
+				this.countTitle.innerHTML = `${this.currentSlideIndex}/${this.totalSlides}`
+			}
+		}
+		window.innerWidth > 959 && sliderPanel.init();
     </script>
 </body>
 </html>

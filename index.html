@@ -33,6 +33,7 @@
         }
 
         if(shortLang !== 'uk' && shortLang !== 'ru') {
+            console.log(`shortLang`, shortLang)
             window.location.replace(`./en`);
         }
     </script>   
@@ -747,6 +748,7 @@
                 .s1 .row {
                     width: 20vw;
                     height: 100vh;
+                    opacity: 0;
                 }
                 .s1 .inrow {
                     margin: 0 20px;
@@ -4562,7 +4564,7 @@
         }
     </style>
 
-    <script type="text/javascript">
+     <script type="text/javascript">
 		const sliderPanel = new class SliderPanel {
 			constructor() {
                 this.panel = null;
@@ -4642,7 +4644,7 @@
 				this.prevSlideIndex = this.currentSlideIndex;
 				this.currentSlideIndex--;
 				if (this.currentSlideIndex === 0) {
-					this.currentSlideIndex = this.totalSlides;
+					this.currentSlideIndex = this.slides.length;
 				}
 				this.updateCount();
 			}
@@ -4655,7 +4657,7 @@
                 }
 				this.prevSlideIndex = this.currentSlideIndex;
 				this.currentSlideIndex++;
-				if (this.currentSlideIndex > this.totalSlides) {
+				if (this.currentSlideIndex > this.slides.length) {
 					this.currentSlideIndex = 1;
 				}
 				this.updateCount();
@@ -4675,6 +4677,9 @@
                 this.countTitle.innerHTML = `${this.currentSlideIndex}/${this.slides.length}`
             }
             show() {
+                if (!this.isDesktop) {
+                    return;
+                }
                 if (this.panel !== null) {
                     this.panel.style.display = 'block';
 

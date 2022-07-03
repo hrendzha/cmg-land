@@ -259,7 +259,7 @@
         /*end s3*/
 
         /*s4*/
-        section.s4 {
+        .s4 {
             height: unset;
             padding: 70px 0px;
         }
@@ -270,6 +270,7 @@
             font-size: 20px;
             font-weight: 700;
             text-align: center;
+            color: #000;
 
             border-radius: 40px;
             background-color: #dbdbdb;
@@ -522,6 +523,12 @@
             .s1 .row {
                 padding: 0;
             }
+        }
+
+        @media screen and (min-width: 600px) and (max-width: 1023px) {
+            .s2 .content p {
+                font-size: 22px;
+            }
 
             .s4 .inrow.mh {
                 margin: 0 70px;
@@ -587,7 +594,7 @@
             }
         }
 
-        @media screen and (min-width: 780px) and (max-width: 959px) {
+        @media screen and (min-width: 780px) and (max-width: 1023px) {
             .s3 .inrow.mh {
                 margin: 0 110px;
             }
@@ -766,6 +773,10 @@
                     backface-visibility: hidden;
                 }
 
+                .s1 .content {
+                    font-size: 16px;
+                }
+
             .s2 {
                 margin-top: 0;
             }
@@ -803,7 +814,14 @@
                         top: 6px;
                     }
             /*end s3*/
+
             /*s4*/
+            .s4 {
+                height: 100vh;
+            }
+            .s4 .row {
+                align-items: center;
+            }
 			.s4 .content {
 				display: grid;
 				max-width: 1120px;
@@ -818,12 +836,12 @@
 				.s4 li:nth-child(2) {
 					grid-row: 1;
 					grid-column: 1;
-					margin-bottom: 0 !important;
+					margin-bottom: 5px !important;
 				}
 				.s4 li:nth-child(3) {
 					grid-row: 1;
 					grid-column: 2;
-					margin-bottom: 0 !important;
+					margin-bottom: 5px !important;
 				}
             /*row2*/
 			.s4 li:nth-child(6) {
@@ -840,10 +858,13 @@
 				background: url(/images/tild3262-3933-4766-b334-623130643461__2.svg) no-repeat 0 0;
 				background-size: 132px 50px;
 			}
+            
 			/*row3*/
 				.s4 li:nth-child(1) {
 					position: relative;
 					top: -7px;
+                    max-width: 540px;
+                    width: 540px;
 					margin: 0 auto -14px auto;
 					grid-row: 3;
 					grid-column: 1/ span 2;
@@ -855,8 +876,8 @@
 				}
 					.s4 li:nth-child(1) span {
 						display: inline-block;
-						max-width: calc(50vw - 30px);
-						width: 560px;
+						max-width: 540px;
+                        width: 540px;
 						height: 131px;
 					}
 					.s4 li:nth-child(1) > span {
@@ -869,6 +890,8 @@
 						}
 							.s4 li:nth-child(1) > span > span > span {
 								display: flex;
+                                align-items: center;
+                                justify-content: center;
 								margin: 13px;
 								border-radius: 70px;
 								background-color: #dbdbdb;
@@ -890,14 +913,27 @@
 				background: url(/images/tild6135-3161-4464-b533-393233346462__4.svg) no-repeat 0 0;
 				background-size: 132px 50px;
 			}
+            .s4 .inrow .item-wrap {
+                padding: 35px;
+                font-size: 22px;
+            }
+            .s4 .inrow .item-wrap img {
+                height: 100px;
+                width: 100px;
+            }
+
             /*row5*/
 			.s4 li:nth-child(4) {
 				grid-row: 5;
 				grid-column: 1;
+                margin-top: 5px;
+                margin-bottom: 0;
 			}
 			.s4 li:nth-child(5) {
 				grid-row: 5;
 				grid-column: 2;
+                margin-top: 5px;
+                margin-bottom: 0;
 			}
             /*end s4*/
 
@@ -1191,7 +1227,7 @@
 
         <section class="s4">
             <div class="row">
-                <div class="inrow">
+                <div class="inrow mh">
                     <ul class="content">
                         <li class="title">
                             <span><span><span>Services for private persons</span></span></span>

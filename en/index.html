@@ -307,8 +307,6 @@
 				height: 50px;
 				width: 50px;
 				margin-right: 30px;
-
-                opacity: 0.3;
 			}
             .s4 .item-wrap > div {
                 width: 50px;
@@ -430,6 +428,7 @@
             margin: 0 0 5vh 0;
             display: flex;
             align-items: center;
+            white-space: nowrap;
 		}
         .s10 .content li:last-child {
             margin-bottom: 0;
@@ -475,10 +474,10 @@
 
         /*s12*/
         .s12 .row1 {
-            height: 50vh;
+            height: 60vh;
         }
         .s12 .row2 {
-            height: 50vh;
+            height: 40vh;
         }
         .s12 .content {
             color: var(--c-black);
@@ -489,6 +488,7 @@
 		.s12 .image.fixed {
             margin-bottom: 2vh;
 			background-image: url(/images/tild3136-6132-4266-b336-663061613065__2021-08-27_17-36-33.png);
+            background-size: contain !important;
 		}
         /*end s12*/
 
@@ -660,8 +660,9 @@
                 height: 100vh;
             }
             .s1 .image {
-                height: 230px;
-            }   
+                height: 180px;
+                flex-shrink: 0;
+            }     
             .s1 .content {
                 font-size: 14px;
             }   
@@ -1351,7 +1352,7 @@
             /* s10 start */
 			.s10 .content ul {
 				column-count: 3;
-				max-width: 1000px;
+				max-width: 890px;
 				margin: 0 auto;
 			}
 			.s10 .content h3 {
@@ -1461,22 +1462,24 @@
             /* s13 end */
 
             .slider-panel {
-                display: block !important;
+                display: none;
                 user-select: none;
             }
 
-            .slider-panel__inner {
-                position: fixed;
-                z-index: 108500477;
-                bottom: 30px;
-                right: 30px;
-                transition: all 1000ms cubic-bezier(.215,.61,.355,1);
-                transition-timing-function: cubic-bezier(.215,.61,.355,1);
-                border-radius: 30px;
-                background-color: rgba(0,0,0,.7);
-                width: 50px;
-            }
-
+			.slider-panel__inner {
+				position: fixed;
+				z-index: 108500477;
+				bottom: 30px;
+				border-radius: 30px;
+				background-color: rgba(0,0,0,.7);
+				width: 50px;
+				right: 0;
+				margin-right: -50px;
+				transition: all 1s ease-in-out;
+			}
+				.slider-panel__inner.translateX {
+					margin-right: 30px;
+				}
             .slider-panel__prev {
                 width: 50px;
                 height: 50px;
@@ -1512,6 +1515,11 @@
         }
 
         @media (min-width: 1200px) { 
+            .s1 .image {
+                height: 200px;
+                flex-shrink: 0;
+            }   
+
             .s4 .inrow .item-wrap {
                 width: 560px;
                 height: 150px;

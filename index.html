@@ -566,128 +566,191 @@
     </style>
 
     <style type="text/css">
-		@media (min-width: 1024px) {
+        @media (min-width: 1024px) {
             html, body {
                 overflow: hidden;
             }
-			.s1 {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-			}
-				.s1 .row {
-					width: 20vw;
-					height: 100vh;
-				}
-			.s1 .row1 {
-				animation: sbs-anim-rec110566382-1494844549684 1s linear forwards;
-				backface-visibility: hidden;
+
+            section {
+                display: none;
+                margin-top: 0;
             }
-			.s1 .row2 {
-				animation: sbs-anim-rec110566382-1494844768363 2s linear forwards;
-				backface-visibility: hidden;
-			}
-			.s1 .row3 {
-				animation: sbs-anim-rec110566382-1494844857864 3s linear forwards;
-				backface-visibility: hidden;
-			}
-			.s1 .row4 {
-				animation: sbs-anim-rec110566382-1494844959805 4s linear forwards;
-				backface-visibility: hidden;
-			}
-			.s1 .row5 {
-                background-position: 0 0;
 
-				animation: sbs-anim-rec110566382-1630076788502 5s linear forwards;
-				backface-visibility: hidden;
-			}
-				.s1 .row1 .image {
-					animation: sbs-anim-rec110566382-1560160754715 1.3s linear forwards;
-					backface-visibility: hidden;
-				}
-				.s1 .row2 .image {
-					animation: sbs-anim-rec110566382-1560164600224 2.5s linear forwards;
-					backface-visibility: hidden;
-				}
-				.s1 .row3 .image {
-					animation: sbs-anim-rec110566382-1560240713405 3.5s linear forwards;
-					backface-visibility: hidden;
-				}
-				.s1 .row4 .image {
-					animation: sbs-anim-rec110566382-1630324927477 4.5s linear forwards;
-					backface-visibility: hidden;
-				}
-				.s1 .row5 .image {
-					animation: sbs-anim-rec110566382-1630074221750 5.5s linear forwards;
-					backface-visibility: hidden;
-				}
-				.s1 .row1 .content {
-					animation: sbs-anim-rec110566382-1630076568253 1.5s linear forwards;
-					backface-visibility: hidden;
-				}
-				.s1 .row2 .content {
-					animation: sbs-anim-rec110566382-1560160074513 3s linear forwards;
-					backface-visibility: hidden;
-				}
-				.s1 .row3 .content {
-					animation: sbs-anim-rec110566382-1560160295017 4s linear forwards;
-					backface-visibility: hidden;
-				}
-				.s1 .row4 .content {
-					animation: sbs-anim-rec110566382-1560160297506 5s linear forwards;
-					backface-visibility: hidden;
-				}
-				.s1 .row5 .content {
-					animation: sbs-anim-rec110566382-1630074297716 6s linear forwards;
-					backface-visibility: hidden;
-				}
+                section .row {
+                    width: 100vw;
+                    flex-grow: 1;
+                }
 
+            .s1 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
 
-			.slider-panel {
+                .s1 .row {
+                    width: 20vw;
+                    height: 100vh;
+                }
+
+                .s1 .row1 {
+                    animation: sbs-anim-rec110566382-1494844549684 1s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row2 {
+                    animation: sbs-anim-rec110566382-1494844768363 2s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row3 {
+                    animation: sbs-anim-rec110566382-1494844857864 3s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row4 {
+                    animation: sbs-anim-rec110566382-1494844959805 4s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row5 {
+                    background-position: 0 0;
+                    animation: sbs-anim-rec110566382-1630076788502 5s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row1 .image {
+                    animation: sbs-anim-rec110566382-1560160754715 1.3s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row2 .image {
+                    animation: sbs-anim-rec110566382-1560164600224 2.5s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row3 .image {
+                    animation: sbs-anim-rec110566382-1560240713405 3.5s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row4 .image {
+                    animation: sbs-anim-rec110566382-1630324927477 4.5s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row5 .image {
+                    animation: sbs-anim-rec110566382-1630074221750 5.5s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row1 .content {
+                    animation: sbs-anim-rec110566382-1630076568253 1.5s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row2 .content {
+                    animation: sbs-anim-rec110566382-1560160074513 3s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row3 .content {
+                    animation: sbs-anim-rec110566382-1560160295017 4s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row4 .content {
+                    animation: sbs-anim-rec110566382-1560160297506 5s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row5 .content {
+                    animation: sbs-anim-rec110566382-1630074297716 6s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+            .s2 {
+                margin-top: 0;
+            }
+
+                .s2 .image {
+                    animation: sbs-anim-rec108547538-1559650158161 1s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s2 .content {
+                    animation: sbs-anim-rec108547538-1470210011265 2s linear forwards;
+                    backface-visibility: hidden;
+                }
+            /*s3*/
+            .s3 {
+                display: flex;
+                flex-direction: column;
+            }
+
+                .s3 .content {
+                    column-count: 2;
+                    width: 1000px;
+                    margin: 0 auto;
+                    column-gap: 50px;
+                    font-size: 22px;
+                    font-weight: 400;
+                }
+
+                    .s3 .content p {
+                        margin-bottom: 32px;
+                    }
+            /*end s3*/
+
+            .slider-panel {
                 display: block !important;
-			}
-			.slider-panel__inner {
-				position: fixed;
-				z-index: 108500477;
-				bottom: 30px;
-				right: 30px;
-				transition: all 1000ms cubic-bezier(.215,.61,.355,1);
-				transition-timing-function: cubic-bezier(.215,.61,.355,1);
-				border-radius: 30px;
-				background-color: rgba(0,0,0,.7);
-				width: 50px;
-			}
-			.slider-panel__prev {
-				width: 50px;
-				height: 50px;
-				padding: 10px;
-				cursor: pointer;
-				background-image: url(//tilda.ws/img/arroow.png);
-				background-size: cover;
-				background-origin: content-box;
-				background-repeat: no-repeat;
-				transform: rotate(-90deg);
-			}
-			.slider-panel__count {
-				color: #fff;
-				padding: 5px;
-				text-align: center;
-				font-family: Arial;
-				font-size: 11px;
-				letter-spacing: .5px;
-			}
-			.slider-panel__next {
-				width: 50px;
-				height: 50px;
-				padding: 10px;
-				cursor: pointer;
-				background-image: url(//tilda.ws/img/arroow.png);
-				background-size: cover;
-				background-origin: content-box;
-				background-repeat: no-repeat;
-				transform: rotate(90deg);
-			}
-		}
+                user-select: none;
+            }
+
+            .slider-panel__inner {
+                position: fixed;
+                z-index: 108500477;
+                bottom: 30px;
+                right: 30px;
+                transition: all 1000ms cubic-bezier(.215,.61,.355,1);
+                transition-timing-function: cubic-bezier(.215,.61,.355,1);
+                border-radius: 30px;
+                background-color: rgba(0,0,0,.7);
+                width: 50px;
+            }
+
+            .slider-panel__prev {
+                width: 50px;
+                height: 50px;
+                padding: 10px;
+                cursor: pointer;
+                background-image: url(//tilda.ws/img/arroow.png);
+                background-size: cover;
+                background-origin: content-box;
+                background-repeat: no-repeat;
+                transform: rotate(-90deg);
+            }
+
+            .slider-panel__count {
+                color: #fff;
+                padding: 5px;
+                text-align: center;
+                font-family: Arial;
+                font-size: 11px;
+                letter-spacing: .5px;
+            }
+
+            .slider-panel__next {
+                width: 50px;
+                height: 50px;
+                padding: 10px;
+                cursor: pointer;
+                background-image: url(//tilda.ws/img/arroow.png);
+                background-size: cover;
+                background-origin: content-box;
+                background-repeat: no-repeat;
+                transform: rotate(90deg);
+            }
+        }
     </style>
 </head>
 <body>

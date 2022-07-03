@@ -845,7 +845,8 @@
 					grid-column: 1;
 					margin-bottom: 5px !important;
 					animation: sbs-anim-rec109635342-1560172029155 2.5s linear forwards;
-					backface-visibility: hidden
+					backface-visibility: hidden;
+                    opacity: 0;
 				}
 					.s4 li:nth-child(2) p {
 						opacity: 0;
@@ -863,6 +864,7 @@
 					margin-bottom: 5px !important;
 					animation: sbs-anim-rec109635342-1560172126278 3.5s linear forwards;
 					backface-visibility: hidden;
+                    opacity: 0;
 				}
 					.s4 li:nth-child(3) p {
 						opacity: 0;
@@ -883,6 +885,7 @@
 					background-size: 132px 50px;
 					animation: sbs-anim-rec109635342-1560172338598 2.3s linear forwards;
 					backface-visibility: hidden;
+                    opacity: 0;
 				}
 				.s4 li:nth-child(7) {
 					grid-row: 2;
@@ -892,11 +895,13 @@
 					background-size: 132px 50px;
 					animation: sbs-anim-rec109635342-1560172261359 3.2s linear forwards;
 					backface-visibility: hidden;
+                    opacity: 0;
 				}
             
 			/*row3*/
 				.s4 li:nth-child(1) {
 					position: relative;
+                    z-index: 2;
 					top: -7px;
 					max-width: 540px;
 					width: 540px;
@@ -910,37 +915,45 @@
 					font-weight: 700;
 					animation: sbs-anim-rec109635342-1560171883207 1s linear forwards;
 					backface-visibility: hidden;
+					opacity: 0;
 				}
-					.s4 li:nth-child(1) span {
-						display: inline-block;
-						max-width: 540px;
-                        width: 540px;
+					.s4 li:nth-child(1) .title-l {
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 224px;
 						height: 131px;
-					}
-					.s4 li:nth-child(1) > span {
 						background: url(/images/tild3962-3565-4563-b436-343730393535__border2.svg) no-repeat 0 0;
 						background-size: 224px 131px;
 						animation: sbs-anim-rec109635342-1560172804278 1.8s linear forwards;
 						backface-visibility: hidden;
+						opacity: 0;
 					}
-						.s4 li:nth-child(1) > span > span {
-							background: url(/images/tild6439-3463-4662-b166-313537343264__border.svg) no-repeat 100% 0;
-							background-size: 224px 131px;
-							animation: sbs-anim-rec109635342-1560172763382 1.8s linear forwards;
-							backface-visibility: hidden;
-						}
-							.s4 li:nth-child(1) > span > span > span {
-								display: flex;
-								align-items: center;
-								justify-content: center;
-								margin: 13px;
-								border-radius: 70px;
-								background-color: #dbdbdb;
-								height: calc(131px - 26px);
-								width: auto;
-								animation: sbs-anim-rec109635342-1478007588891 2.5s linear forwards;
-								backface-visibility: hidden;
-							}
+					.s4 li:nth-child(1) .title-r {
+						position: absolute;
+						right: 0;
+						top: 0;
+						width: 224px;
+						height: 131px;
+						background: url(/images/tild6439-3463-4662-b166-313537343264__border.svg) no-repeat 100% 0;
+						background-size: 224px 131px;
+						animation: sbs-anim-rec109635342-1560172763382 1.8s linear forwards;
+						backface-visibility: hidden;
+						opacity: 0;
+					}
+					.s4 li:nth-child(1) .title-c {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						margin: 13px;
+						border-radius: 70px;
+						background-color: #dbdbdb;
+						height: calc(131px - 26px);
+						width: auto;
+						animation: sbs-anim-rec109635342-1478007588891 2.5s linear forwards;
+						backface-visibility: hidden;
+						opacity: 0;
+					}
             /*row4*/
 				.s4 li:nth-child(8) {
 					grid-row: 4;
@@ -950,6 +963,7 @@
 					background-size: 132px 50px;
 					animation: sbs-anim-rec109635342-1560172961015 3.8s linear forwards;
 					backface-visibility: hidden;
+                    opacity: 0;
 				}
 				.s4 li:nth-child(9) {
 					grid-row: 4;
@@ -959,6 +973,7 @@
 					background-size: 132px 50px;
 					animation: sbs-anim-rec109635342-1560173050432 4.6s linear forwards;
 					backface-visibility: hidden;
+                    opacity: 0;
 				}
             .s4 .inrow .item-wrap {
                 padding: 35px;
@@ -977,6 +992,7 @@
 					margin-bottom: 0;
 					animation: sbs-anim-rec109635342-1560172496860 4s linear forwards;
 					backface-visibility: hidden;
+                    opacity: 0;
 				}
 					.s4 li:nth-child(4) p {
 						opacity: 0;
@@ -995,6 +1011,7 @@
 					margin-bottom: 0;
 					animation: sbs-anim-rec109635342-1560172526372 4.8s linear forwards;
 					backface-visibility: hidden;
+                    opacity: 0;
 				}
 					.s4 li:nth-child(5) p {
 						opacity: 0;
@@ -1491,7 +1508,10 @@
                 <div class="inrow mh">
                     <ul class="content">
                         <li class="title">
-                            <span><span><span>Services for private persons</span></span></span>
+                            <div class="title-l"></div>
+                            <!--<span><span><span>Services for private persons</span></span></span>-->
+                            <div class="title-c">Services for private persons</div>
+                            <div class="title-r"></div>
                         </li>
                         <li class="item-wrap">
                             <img src="/images/tild3339-3734-4631-b334-646233626463__001-boarding-pass.svg" />

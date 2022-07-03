@@ -4573,12 +4573,15 @@
 
 				this.currentSlideIndex = 0;
 				this.prevSlideIndex = 0;
-                this.totalSlides = 0;
+                this.slides = [];
+
+				this.slideTimer = 0;
 
                 this.inited = false;
 			}
             init() {
                 if (this.inited) {
+                    this.show();
                     return;
                 }
                 this.inited = true;
@@ -4588,24 +4591,54 @@
 				this.countTitle = this.panel.querySelector('.slider-panel__count');
 				this.nextBtn = this.panel.querySelector('.slider-panel__next');
 
-				this.currentSlideIndex = 1;
-				this.prevSlideIndex = 1;
-				this.totalSlides = document.querySelectorAll('section').length;
+                this.slides = Array.from(document.querySelectorAll('section'));
 
 				this.prevBtn.addEventListener('click', this.onPrevClick);
-				this.nextBtn.addEventListener('click', this.onNextClick);
+                this.nextBtn.addEventListener('click', this.onNextClick);
 
-                this.updateCount();
+                document.addEventListener('wheel', this.onWheel);
 
-                this.panel.style.display = 'block';
-                setTimeout(() => this.inner.classList.add('translateX'), 100);
-                
+                window.addEventListener('resize', this.tryResize);
+
+                this.show();
+            }
+            get isDesktop() {
+                return document.body.clientWidth > 1023;
+			}
+            tryResize = () => {
+                if (this.isDesktop) {
+					this.init();
+				}
+				else {
+					this.hide();
+				}
+			}
+            /**
+             * @param {MouseWheelEvent} e
+             */
+            onWheel = e => {
+                if (!this.isDesktop) {
+                    return;
+				}
+				if (this.slideTimer) {
+					clearTimeout(this.slideTimer);
+				}
+				this.slideTimer = setTimeout(() => {
+					if (e.deltaY > 0) {
+						this.onNextClick();
+					}
+					else {
+						this.onPrevClick();
+					}
+				}, 500);
 			}
 			/**
 			 * @param {MouseEvent} e
 			 */
-			onPrevClick = e => {
-				e.preventDefault();
+            onPrevClick = e => {
+                if (e) {
+                    e.preventDefault();
+                }
 				this.prevSlideIndex = this.currentSlideIndex;
 				this.currentSlideIndex--;
 				if (this.currentSlideIndex === 0) {
@@ -4616,8 +4649,10 @@
 			/**
 			 * @param {MouseEvent} e
 			 */
-			onNextClick = e => {
-				e.preventDefault();
+            onNextClick = e => {
+                if (e) {
+                    e.preventDefault();
+                }
 				this.prevSlideIndex = this.currentSlideIndex;
 				this.currentSlideIndex++;
 				if (this.currentSlideIndex > this.totalSlides) {
@@ -4637,10 +4672,33 @@
                 const next = this.getSection(this.currentSlideIndex);
                 next.style.display = 'flex';
                 next.classList.add('active');
-				this.countTitle.innerHTML = `${this.currentSlideIndex}/${this.totalSlides}`
+                this.countTitle.innerHTML = `${this.currentSlideIndex}/${this.slides.length}`
+            }
+            show() {
+                if (this.panel !== null) {
+                    this.panel.style.display = 'block';
+
+					this.currentSlideIndex = 1;
+                    this.prevSlideIndex = 1;
+                    this.updateCount();
+
+					setTimeout(() => this.inner.classList.add('translateX'), 100);
+				}
 			}
-		}
-		window.innerWidth > 959 && sliderPanel.init();
+            hide() {
+                if (this.panel !== null) {
+					this.inner.classList.remove('translateX');
+                    this.panel.style.display = 'none';
+                    this.slides.forEach(section => {
+                        section.style.display = '';
+                        section.classList.remove('active');
+                    });
+				}
+			}
+        }
+
+		sliderPanel.init();
+         
     </script>
 </body>
 </html>

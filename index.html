@@ -291,25 +291,31 @@
 		.s4 .inrow .item-wrap:nth-child(5) {
 			background-color: #303942;
 		}
-		.s4 .inrow .item-wrap {
-            width: 300px;
+		.s4 .item-wrap {
             height: 121px;
 			display: flex;
 			align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            padding: 0 15px;
 			font-size: 14px;
 			color: #fff;
 		}
 			.s4 .inrow .item-wrap:not(:last-child) {
 				margin-bottom: 30px;
 			}
-			.s4 .inrow .item-wrap img {
+			.s4 .item-wrap img {
 				height: 50px;
 				width: 50px;
 				margin-right: 30px;
 
                 opacity: 0.3;
 			}
+            .s4 .item-wrap > div {
+                width: 50px;
+                height: 50px;
+                margin-right: 15px;
+                opacity: .3;
+            }
         /*end s4*/
 
         /*s5*/
@@ -542,12 +548,17 @@
                 font-size: 27px;
             }
             .s4 .inrow .item-wrap {
-                padding: 35px;
+                padding: 0 30px;
                 font-size: 19px;
             }
+            .s4 .inrow .item-wrap div {
+                height: 70px;
+                width: 70px;
+                margin-right: 30px;
+            }
             .s4 .inrow .item-wrap img {
-                height: 100px;
-                width: 100px;
+                height: 70px;
+                width: 70px;
             }
 
             .s8 .inrow.mh {
@@ -673,9 +684,7 @@
             }
             /* s2 end */
         }
-    </style>
 
-    <style type="text/css">
         @media (min-width: 1024px) {
 			@keyframes fadeInFromNone {
 				0% {
@@ -846,7 +855,6 @@
             }
 			.s4 .content {
 				display: grid;
-				max-width: 1120px;
 				margin: 0 auto;
 				column-gap: 40px;
 			}
@@ -856,6 +864,7 @@
 			}
 			/*row1*/
 				.s4 li:nth-child(2) {
+                    height: 150px;
 					grid-row: 1;
 					grid-column: 1;
 					margin-bottom: 5px !important;
@@ -868,12 +877,19 @@
 						animation: sbs-anim-rec109635342-1470210011265 2.9s linear forwards;
 						backface-visibility: hidden;
 					}
+                    .s4 li:nth-child(2) div {
+                        width: 100px;
+                        height: 100px;
+                    }
 					.s4 li:nth-child(2) img {
+                        width: 100px;
+                        height: 100px;
 						opacity: 0;
 						animation: sbs-anim-rec109635342-1560173488074 2.7s linear forwards;
 						backface-visibility: hidden;
 					}
 				.s4 li:nth-child(3) {
+                    height: 150px;
 					grid-row: 1;
 					grid-column: 2;
 					margin-bottom: 5px !important;
@@ -886,7 +902,13 @@
 						animation: sbs-anim-rec109635342-1560169117965 3.9s linear forwards;
 						backface-visibility: hidden;
 					}
+                    .s4 li:nth-child(3) div {
+                        width: 86px;
+                        height: 86px;
+                    }
 					.s4 li:nth-child(3) img {
+                        width: 86px;
+                        height: 86px;
 						opacity: 0;
 						animation: sbs-anim-rec109635342-1560173488087 3.7s linear forwards;
 						backface-visibility: hidden;
@@ -993,13 +1015,10 @@
             .s4 .inrow .item-wrap {
                 font-size: 22px;
             }
-            .s4 .inrow .item-wrap img {
-                height: 100px;
-                width: 100px;
-            }
 
             /*row5*/
 				.s4 li:nth-child(4) {
+                    height: 150px;
 					grid-row: 5;
 					grid-column: 1;
 					margin-top: 5px;
@@ -1013,12 +1032,19 @@
 						animation: sbs-anim-rec109635342-1560170004627 5.4s linear forwards;
 						backface-visibility: hidden;
 					}
+                    .s4 li:nth-child(4) div {
+                        width: 90px;
+                        height: 90px;
+                    }
 					.s4 li:nth-child(4) img {
+                        width: 90px;
+                        height: 90px;
 						opacity: 0;
 						animation: sbs-anim-rec109635342-1560173914323 4.2s linear forwards;
 						backface-visibility: hidden;
 					}
 				.s4 li:nth-child(5) {
+                    height: 150px;
 					grid-row: 5;
 					grid-column: 2;
 					margin-top: 5px;
@@ -1032,7 +1058,13 @@
 						animation: sbs-anim-rec109635342-1560169033220 5.2s linear forwards;
 						backface-visibility: hidden;
 					}
+                     .s4 li:nth-child(5) div {
+                        width: 90px;
+                        height: 90px;
+                    }
 					.s4 li:nth-child(5) img {
+                        width: 90px;
+                        height: 90px;
                         opacity: 0;
 						animation: sbs-anim-rec109635342-1560173914336 5s linear forwards;
 						backface-visibility: hidden;
@@ -1484,6 +1516,15 @@
                 width: 560px;
                 height: 150px;
             }
+            .s4 li:nth-child(2) div,
+            .s4 li:nth-child(3) div,
+            .s4 li:nth-child(4) div,
+            .s4 li:nth-child(5) div {
+                margin-right: 30px;
+            }
+            .s4 .item-wrap {
+                padding: 0 30px;
+            }
         }
 
         @media (min-width: 1400px) {
@@ -1623,33 +1664,40 @@
                     <ul class="content">
                         <li class="title">
                             <div class="title-l"></div>
-                            <!--<span><span><span>Services for private persons</span></span></span>-->
                             <div class="title-c">Услуги для частных лиц</div>
                             <div class="title-r"></div>
                         </li>
                         <li class="item-wrap">
-                            <img src="/images/tild3339-3734-4631-b334-646233626463__001-boarding-pass.svg" />
+                            <div>
+                                <img src="/images/tild3339-3734-4631-b334-646233626463__001-boarding-pass.svg" />
+                            </div>
                             <p>
                                 Альтернативное гражданство<br />
                                 через инвестиции
                             </p>
                         </li>
                         <li class="item-wrap">
-                            <img src="/images/tild3161-3761-4163-b966-303537626562__002-architecture-and.svg" />
+                            <div>
+                                <img src="/images/tild3161-3761-4163-b966-303537626562__002-architecture-and.svg" />
+                            </div>
                             <p>
-                                Сопровождение сделок по приобретению<br />
+                                Сопровождение сделок по приобретению
                                 активов за рубежом (корпоративных прав, недвижимости, яхт, ценных бумаг)
                             </p>
                         </li>
                         <li class="item-wrap">
-                            <img src="/images/tild3631-3232-4533-b735-323162373733__001-bank-account.svg" />
+                            <div>
+                                <img src="/images/tild3631-3232-4533-b735-323162373733__001-bank-account.svg" />
+                            </div>
                             <p>
                                 Сопровождение открытия<br />
                                 личных счетов за рубежом
                             </p>
                         </li>
                         <li class="item-wrap">
-                            <img src="/images/tild3039-3839-4965-a561-396539646436__002-analysis.svg" />
+                            <div>
+                                <img src="/images/tild3039-3839-4965-a561-396539646436__002-analysis.svg" />
+                            </div>
                             <p>
                                 Налоговый консалтинг<br />
                                 (Закон о КИК, CRS, BEPS)

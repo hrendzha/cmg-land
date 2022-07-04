@@ -74,6 +74,22 @@
             margin: 0 30px;
         }
 
+        .change-lang-wrap {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 999;
+            padding: 6px 15px;
+
+            background-color: rgba(0,0,0,.7);
+            border-radius: 30px;
+        }
+        .change-lang-wrap > a {
+            color: var(--c-white);
+            font-size: 19px;
+            text-decoration: none;
+        }
+
         section {
             height: 100vh;
             /* transition: height 0.1s; */
@@ -156,6 +172,7 @@
 
         /*s1*/
         .s1 {
+            position: relative;
 			height: 125vh;
 		}
 		.s1 .row {
@@ -703,8 +720,29 @@
 					opacity: 1;
 				}
 			}
+            @keyframes changeLangAnim {
+				0% {
+					opacity: 0;
+				}
+
+				1% {
+					opacity: 0;
+				}
+
+				100% {
+                    pointer-events: auto;
+					opacity: 1;
+				}
+			}
+
             html, body {
                 overflow: hidden;
+            }
+
+            .change-lang-wrap {
+                opacity: 0;
+                pointer-events: none;
+                animation: changeLangAnim 1s ease-out 5.5s forwards;
             }
 
             section {
@@ -1562,6 +1600,10 @@
 <body>
     <div class="wrapper">
         <section class="s1">
+             <div class="change-lang-wrap">
+                <a href="/">RU</a>
+            </div>
+
             <div class="row row1">
                 <div class="inrow">
                     <div class="image">

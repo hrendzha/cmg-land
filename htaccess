@@ -1,0 +1,36 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page5431819.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^tamozhochist$ page5699563.html [NC]
+RewriteRule ^tamozhochist/$ page5699563.html [NC]
+
+RewriteRule ^transportlogistics$ page5699657.html [NC]
+RewriteRule ^transportlogistics/$ page5699657.html [NC]
+
+RewriteRule ^skladskieuslugi$ page5699822.html [NC]
+RewriteRule ^skladskieuslugi/$ page5699822.html [NC]
+
+RewriteRule ^yuridsoprovozhdenie$ page5700054.html [NC]
+RewriteRule ^yuridsoprovozhdenie/$ page5700054.html [NC]
+
+RewriteRule ^organizaciyaraschetov$ page5700127.html [NC]
+RewriteRule ^organizaciyaraschetov/$ page5700127.html [NC]
+
+RewriteRule ^cmg-old$ page21592218.html [NC]
+RewriteRule ^cmg-old/$ page21592218.html [NC]
+
+RewriteRule ^cmg$ page6097792.html [NC]
+RewriteRule ^cmg/$ page6097792.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/img/tildafavicon.ico [R=302,L]
+

@@ -193,7 +193,7 @@
         /*s1*/
         .s1 {
             position: relative;
-			height: 125vh;
+			height: 150vh;
 		}
 		.s1 .row {
 			height: 25vh;
@@ -215,8 +215,17 @@
 		.s1 .row3 img {
 			height: 6vh;
 		}
+		.s1 .row4 .image {
+			font-size: 3vh;
+		}
+		.s1 .row4 .image span {
+			text-align: center;
+		}
 		.s1 .row5 img {
 			height: 5.8vh;
+		}
+		.s1 .row6 img {
+			height: 2.4vh;
 		}
 		.s1 .row1 {
 			background-image: url(/images/tild6637-3735-4462-b362-373234393564__hieu-vu-minh-92776-u.jpg);
@@ -229,12 +238,16 @@
 		}
 		.s1 .row4 {
 			padding-top: 10px;
-			background-image: url(/images/tild3063-3161-4266-a538-306466653664__charts-coffee-cup-93.jpg);
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(/images/tild3063-3161-4266-a538-306466653664__charts-coffee-cup-93.jpg);
 		}
 		.s1 .row5 {
-			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(/images/tild3932-3130-4134-b138-623165393464__zniix-2.jpg);
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(/images/tild3932-3130-4134-b138-623165393464__zniix-2.jpg);
             background-position: top center;
 		}
+        .s1 .row6 {
+			background-image: url(/images/earth.jpg);
+		}
+        
 		.s1 .row .content p {
 			margin-bottom: 6px;
 		}
@@ -530,27 +543,84 @@
         /*end s12*/
 
         /*s13*/
-		.s13 .row {
+        .s13 .row {
+            height: 100%;
+			background-image: url(/images/earth.jpg);
+		}
+        .s13 .row img {
+            width: 194px;
+            height: 28px;
+		}
+        /*s13 end*/
+
+        /*s14*/
+        .s14 .row {
+            height: 33.3vh;
+        }
+        .s14 .content {
+            margin-left: 20px;
+
+            font-size: 14px;
+            color: var(--c-black);
+        }
+			.s14 .inrow {
+				justify-content: center;
+				align-items: flex-start;
+			}
+			.s14 .image img {
+                width: 8vh;
+                height: 8vh;
+			}
+			.s14 .list-item {
+                display: flex;
+				align-items: flex-start;
+				justify-content: center;
+			}
+			.s14 .row4 .image {
+                opacity: .25;
+			}
+			.s14 .row4 .image img {
+                display: block;
+                width: unset;
+                height: 14vh;
+			}
+
+            .s14 .content h3 {
+                margin-left: -20px;
+                margin-bottom: 5px;
+
+                font-size: 20px;
+            }
+            .s14 .content ul {
+               list-style: unset;
+            }
+            .s14 .list-item .image {
+               margin-right: 10px;
+            }
+            .s14 .row4 .inrow {
+                justify-content: flex-start;
+			}
+        /*s14 end*/
+
+        /*s15*/
+		.s15 .row {
             height: 100%;
 			background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.8), rgba(0, 0, 0, 0.6)), url(/images/tild3166-3164-4564-b661-336562626633__timj-310824-unsplash.jpg);
 		}
-		.s13 .content p {
+		.s15 .content p {
             font-size: 22px;
             line-height: 32px;
             text-align: center;
 		}
-		.s13 .inrow.mh {
+		.s15 .inrow.mh {
             margin: 0 20px;
 		}
 
-        @media screen and (min-height: 960px) {
-            .s1 {
-                height: 100vh;
-			}
-            .s1 .row {
-                height: 20vh;
+         @media screen and (max-width: 599px) {
+            .s1 .row6 .image:first-child {
+                margin-bottom: 12px;
             }
-        }
+         }
 
         @media screen and (min-width: 600px) and (max-width: 959px) {
             .s1 .inrow {
@@ -559,7 +629,7 @@
                 justify-content: space-between;
             }
             .s1 .image {
-                width: 210px;
+                width: 260px;
                 flex-shrink: 0;
                 align-self: flex-start;
                 padding-top: 30px;
@@ -598,23 +668,29 @@
                 width: 70px;
             }
 
-            .s8 .inrow.mh {
+            .s8 .inrow.mh,
+            .s14 .inrow.mh {
                 margin: 0 60px;
             }
-            .s8 .image img {
+            .s8 .image img,
+            .s14 .image img {
                 width: 12vh;
                 height: 12vh;
             }
-            .s8 .list-item .image {
+            .s8 .list-item .image,
+            .s14 .list-item .image {
                 margin-right: 30px;
             }
-            .s8 .content h3 {
+            .s8 .content h3,
+            .s14 .content h3 {
                 font-size: 23px;
             }
-            .s8 .content {
+            .s8 .content,
+            .s14 .content {
                 font-size: 15px;
             }
-            .s8 .row4 .inrow {
+            .s8 .row4 .inrow,
+            .s14 .row4 .inrow {
                 align-items: center;
             }
 
@@ -641,7 +717,7 @@
                 margin: 0 auto 5vh auto;
             }
 
-            .s13 .content p {
+            .s15 .content p {
                 font-size: 34px;
                 line-height: 40px;
             }
@@ -691,20 +767,24 @@
 				display: flex;
 				flex-direction: row;
 				align-items: center;
+                flex-wrap: wrap;
 			}
             .s1 .row {
-                width: 20vw;
-                height: 100vh;
+                flex-basis: calc(100% / 3);
+                height: 50vh;
+            }
+            .s1 .inrow {
+                margin: 0 20px;
             }
             .s1 .image {
-                height: 180px;
+                height: 90px;
                 flex-shrink: 0;
             }     
             .s1 .content {
                 font-size: 14px;
             }   
             .s1 .row .content p {
-                margin-bottom: 20px;
+                margin-bottom: 16px;
             }
             
             /* s2 */
@@ -723,7 +803,7 @@
             /* s2 end */
         }
 
-        @media (min-width: 1024px) {
+        @media screen and (min-width: 1024px) {
 			@keyframes fadeInFromNone {
 				0% {
 					display: none;
@@ -784,13 +864,13 @@
             }
 
                 .s1 .row {
-                    width: 20vw;
-                    height: 100vh;
                     opacity: 0;
+                    padding-top: 0;
                 }
                 .s1 .inrow {
                     margin: 0 20px;
                 }
+
                 .s1 .row1 {
                     animation: sbs-anim-rec110566382-1494844549684 1s linear forwards;
                     backface-visibility: hidden;
@@ -803,15 +883,17 @@
                     animation: sbs-anim-rec110566382-1494844857864 3s linear forwards;
                     backface-visibility: hidden;
                 }
-
                 .s1 .row4 {
                     animation: sbs-anim-rec110566382-1494844959805 4s linear forwards;
                     backface-visibility: hidden;
                 }
-
                 .s1 .row5 {
                     background-position: 0 0;
                     animation: sbs-anim-rec110566382-1630076788502 5s linear forwards;
+                    backface-visibility: hidden;
+                }
+                .s1 .row6 {
+                    animation: sbs-anim-rec110566382-1630076788502 6s linear forwards;
                     backface-visibility: hidden;
                 }
 
@@ -840,6 +922,11 @@
                     backface-visibility: hidden;
                 }
 
+                .s1 .row6 .image {
+                    animation: sbs-anim-rec110566382-1630074221750 6.5s linear forwards;
+                    backface-visibility: hidden;
+                }
+
                 .s1 .row1 .content {
                     animation: sbs-anim-rec110566382-1630076568253 1.5s linear forwards;
                     backface-visibility: hidden;
@@ -862,6 +949,11 @@
 
                 .s1 .row5 .content {
                     animation: sbs-anim-rec110566382-1630074297716 6s linear forwards;
+                    backface-visibility: hidden;
+                }
+
+                .s1 .row6 .content {
+                    animation: sbs-anim-rec110566382-1630074297716 7s linear forwards;
                     backface-visibility: hidden;
                 }
 
@@ -1207,18 +1299,22 @@
                 height: 10vh;
             }
             /*end s7*/
+
             /*s8*/
-            .s8 {
+            .s8,
+            .s14 {
                 flex-wrap: wrap;
             }
-				.s8 .row {
+				.s8 .row,
+                .s14 .row {
 					width: auto;
 					height: auto;
 					flex-basis: 50%;
 					flex-shrink: 0;
 					flex-grow: 0;
 				}
-				.s8 .inrow {
+				.s8 .inrow, 
+				.s14 .inrow {
 					margin: 0;
 					flex-grow: 0;
 					height: 200px;
@@ -1226,84 +1322,105 @@
 					width: calc(100vw / 2 - 30px);
 					justify-content: flex-start;
 				}
-				.s8 .row1, .s8 .row3 {
+				.s8 .row1, .s8 .row3, 
+				.s14 .row1, .s14 .row3 {
 					justify-content: flex-end;
 				}
-				.s8 .row2, .s8 .row4 {
+				.s8 .row2, .s8 .row4, 
+				.s14 .row2, .s14 .row4 {
 					justify-content: flex-start;
 				}
-				.s8 .row1, .s8 .row2 {
+				.s8 .row1, .s8 .row2,
+				.s14 .row1, .s14 .row2 {
 					align-items: flex-end;
 				}
-				.s8 .row3, .s8 .row4 {
+				.s8 .row3, .s8 .row4,
+				.s14 .row3, .s14 .row4 {
                     margin-top: 30px;
 					align-items: flex-start;
 				}
-				.s8 .list-item {
+				.s8 .list-item,
+				.s14 .list-item {
 					justify-content: flex-start;
 					width: 90%;
 				}
-				.s8 .image img {
+				.s8 .image img,
+				.s14 .image img {
 					width: 10.3vh;
 					height: 10.3vh;
 				}
-                .s8 h3 {
+                .s8 h3,
+                .s14 h3 {
                     font-size: 20px;
                     font-weight: 700;
                 }
-                .s8 .content li {
+                .s8 .content li,
+                .s14 .content li {
                     margin-bottom: 3px;
                     font-size: 18px;
                     font-weight: 400;
                     opacity: .8;
                 }
-                .s8 .content li:last-child {
+                .s8 .content li:last-child,
+                .s14 .content li:last-child {
                     margin-bottom: 0;
                 }
-				.s8 .list-item .image {
+				.s8 .list-item .image,
+				.s14 .list-item .image {
 					margin-right: 40px;
 				}
-				.s8 .row4 .image img {
+				.s8 .row4 .image img,
+				.s14 .row4 .image img {
 					height: 10.5vh;
 					opacity: 0.25;
 				}
-				.s8 .row1 .image {
+				.s8 .row1 .image,
+				.s14 .row1 .image {
 					animation: sbs-anim-rec109685621-1560246396397 2.5s linear forwards;
 					backface-visibility: hidden;
 				}
-				.s8 .row2 .image {
+				.s8 .row2 .image,
+				.s14 .row2 .image {
 					animation: sbs-anim-rec109685621-1560246459800 4s linear forwards;
 					backface-visibility: hidden;
 				}
-				.s8 .row3 .image {
+				.s8 .row3 .image,
+				.s14 .row3 .image {
 					animation: sbs-anim-rec109685621-1560246521427 5.5s linear forwards;
 					backface-visibility: hidden;
 				}
-				.s8 .row4 .image {
+				.s8 .row4 .image,
+				.s14 .row4 .image {
 					animation: sbs-anim-rec109685621-1560330852013 8s linear forwards;
 					backface-visibility: hidden;
 				}
-				.s8 .row1 h3 {
+				.s8 .row1 h3,
+				.s14 .row1 h3 {
 					animation: sbs-anim-rec109685621-1560179101559 1s linear forwards;
 					backface-visibility: hidden;
 				}
-				.s8 .row2 h3 {
+				.s8 .row2 h3,
+				.s14 .row2 h3 {
 					animation: sbs-anim-rec109685621-1560179186636 2.5s linear forwards;
 					backface-visibility: hidden;
 				}
-				.s8 .row3 h3 {
+				.s8 .row3 h3,
+				.s14 .row3 h3 {
 					animation: sbs-anim-rec109685621-1560179278673 4s linear forwards;
 					backface-visibility: hidden;
 				}
-				.s8 .row1 .content ul {
+				.s8 .row1 .content ul,
+				.s14 .row1 .content ul {
 					animation: sbs-anim-rec109685621-1560179106952 1.5s linear forwards;
 					backface-visibility: hidden;
 				}
-				.s8 .row2 .content ul {
+				.s8 .row2 .content ul,
+				.s14 .row2 .content ul {
 					animation: sbs-anim-rec109685621-1560179178660 3s linear forwards;
 					backface-visibility: hidden;
 				}
-				.s8 .row3 .content ul {
+				.s8 .row3 .content ul,
+				.s14 .row3 .content ul {
 					animation: sbs-anim-rec109685621-1560179289316 4.5s linear forwards;
 					backface-visibility: hidden;
 				}
@@ -1506,19 +1623,26 @@
             /* s11 end */
 
             /* s13 start */
-			.s13 .content {
+            .s13 .row img {
+                width: 318px;
+                height: 46px;
+            }
+            /* s13 end */
+
+            /* s15 start */
+			.s15 .content {
 				animation: sbs-anim-rec108574850-1470210011265 1s linear forwards;
 				backface-visibility: hidden;
                 opacity: 0;
 			}
-			.s13 .content p {
+			.s15 .content p {
 				font-size: 50px;
 				line-height: 60px;
 			}
-            .s13 .content .span-br {
+            .s15 .content .span-br {
                 display: block;
             }
-            /* s13 end */
+            /* s15 end */
 
             .slider-panel {
                 display: none;
@@ -1573,9 +1697,9 @@
             }
         }
 
-        @media (min-width: 1200px) { 
+        @media screen and (min-width: 1200px) { 
             .s1 .image {
-                height: 200px;
+                height: 130px;
                 flex-shrink: 0;
             }   
 
@@ -1594,7 +1718,7 @@
             }
         }
 
-        @media (min-width: 1400px) {
+        @media screen and (min-width: 1400px) {
             .s1 .inrow {
                 margin: 0 40px;
             }
@@ -1613,6 +1737,45 @@
             }
             .s1 .row5 img {
                 height: 7.8vh;
+            }
+        }
+
+        @media screen and (min-height: 768px) {
+            .s1 .row .content p {
+                margin-bottom: 8px;
+            }
+        }
+
+        /* @media screen and (min-height: 820px) {
+            .s1 .row .content p {
+                margin-bottom: 12px;
+            }
+        } */
+
+        @media screen and (min-height: 960px) and (max-width: 959px) {
+            .s1 {
+                height: 100vh;
+			}
+            .s1 .row {
+                height: 20vh;
+            }
+        }
+
+        @media screen and (min-height: 1024px) and (min-width: 1024px) {
+            .s1 .image {
+                height: 130px;
+            }
+            .s1 .row .content p {
+                margin-bottom: 20px;
+            }
+            .s1 .inrow {
+                margin: 0 40px;
+            }
+        }
+
+        @media screen and (min-height: 1366px) and (min-width: 1024px) {
+            .s1 .image {
+                height: 180px;
             }
         }
     </style>
@@ -1687,6 +1850,19 @@
                         <p>Создание и администрирование КИФ / ПИФ</p>
                         <p>Структурирование бизнеса</p>
                         <p>Управление внутригрупповой ликвидностью</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row row6">
+                <div class="inrow">
+                    <div class="image">
+                        <img src="/images/flexify-logo.svg" alt="" />
+                    </div>
+                    <div class="content">
+                        <p>Надежный сервис интернет-эквайринга для вашего интернет-бизнеса</p>
+                        <p>Прием платежей со всего мира. Мультивалютность</p>
+                        <p>Личный кабинет. Все финансовые операции в одном месте</p>
+                        <p>Бесплатная интеграция API</p>
                     </div>
                 </div>
             </div>
@@ -1989,6 +2165,68 @@
         <section class="s13">
             <div class="row">
                 <div class="inrow mh f-c">
+                    <div class="image">
+                        <img src="/images/flexify-logo.svg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s14">
+            <div class="row row1">
+                <div class="inrow mh">
+                    <div class="list-item">
+                        <div class="image">
+                            <img src="/images/globus-business.svg" alt="" title="" />
+                        </div>
+                        <div class="content">
+                            <h3>Прием платежей со всего мира. Мультивалютность</h3>
+                            <ul>
+                                <li>Anti-Fraud защита</li>
+                                <li>Выгодная конвертация</li>
+                                <li>Рекуррентные платежи</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="inrow mh">
+                    <div class="list-item">
+                        <div class="image">
+                            <img src="/images/tild6466-3838-4363-b832-343936353230__2.svg" alt="" title="" />
+                        </div>
+                        <div class="content">
+                            <h3>Личный кабинет. Все финансовые операции в одном месте</h3>
+                            <ul>
+                                <li>Поддержка 24 на 7</li>
+                                <li>Понятная аналитика</li>
+                                <li>Прозрачность обслуживания и оплат</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row3">
+                <div class="inrow mh">
+                    <div class="list-item">
+                        <div class="image">
+                            <img src="/images/gears.svg" alt="" title="" />
+                        </div>
+                        <div class="content">
+                            <h3>Бесплатная интеграция API</h3>
+                            <ul>
+                                <li>Мультиязычная документация</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s15">
+            <div class="row">
+                <div class="inrow mh f-c">
                     <div class="content">
                         <p>Готовы к взаимовыгодному <span class="span-br"></span> сотрудничеству!</p>
                     </div>
@@ -2000,7 +2238,7 @@
     <div class="slider-panel" style="display: none">
         <div class="slider-panel__inner">
             <div class="slider-panel__prev"></div>
-            <div class="slider-panel__count">1/13</div>
+            <div class="slider-panel__count">1/15</div>
             <div class="slider-panel__next"></div>
         </div>
     </div>
@@ -4284,6 +4522,11 @@
                 }
                 if (this.panel !== null) {
                     this.panel.style.display = 'block';
+
+                    this.slides.forEach(section => {
+                        section.style.display = '';
+                        section.classList.remove('active');
+                    });
 
 					this.currentSlideIndex = 1;
                     this.prevSlideIndex = 1;
